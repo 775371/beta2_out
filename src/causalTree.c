@@ -377,7 +377,7 @@ Rprintf("split rule in causal tree.c is %d.\n", split_Rule);
     }
     tree->complexity = tree->risk;
     ct.alpha = ct.complexity * tree->risk;
-          
+                                  Rprintf("start partition in causal tree.c\n");
 
     /*
      * Do the basic tree
