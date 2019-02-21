@@ -69,6 +69,7 @@ CTH_rundown(pNode tree, int obs, double *cp, double *xpred, double *xtemp, int k
 	        otree = tree;
 	    }
 	    xpred[i] = tree->response_est[0];
+	    xpreds[i] = tree->responses_est[0];
             my_leaf_id = tree->id;
         
         for (s = k; s < ct.n; s++) {
@@ -177,6 +178,7 @@ oops:;
 	    Rprintf("Entered CTH_rundown.c. Double check.\n");
 	for (i = 0; i < ct.num_unique_cp; i++)
 	    xpred[i] = otree->response_est[0];
+	    xpreds[i] = otree->responses_est[0];
 
 	xtemp[i] = (*ct_xeval)(ct.ydata[obs2], ct.wt[obs2], ct.treatment[obs2], tr_mean, con_mean);
 	Rprintf("oops number %d.\n", opnumber++);
