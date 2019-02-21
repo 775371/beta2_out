@@ -51,7 +51,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
 }
 
 void
-CTss(int n, double *y[], double *value[0], double *value[1], double *con_mean, double *tr_mean, 
+CTss(int n, double *y[], double *value, double *values, double *con_mean, double *tr_mean, 
      double *risk, double *wt, double *treatment, double *treatments, double max_y,
      double alpha, double eta, double train_to_est_ratio)
 	
@@ -121,16 +121,16 @@ CTss(int n, double *y[], double *value[0], double *value[1], double *con_mean, d
  
  A[0]=beta_1;
  A[1]=beta_2;
- value[0] = &A[0];
- value[1] = &A[1];
+ value = &A[0];
+ values = &A[1];
     beta1_sqr_sum = beta_1 * beta_1;
     beta2_sqr_sum = beta_2 * beta_2;
     var_beta = eta*(beta1_sqr_sum /twt- beta_1 * beta_1 / (twt* twt)) + (1-eta)*(beta2_sqr_sum /twt- beta_2 * beta_2 / (twt* twt));
     
     *tr_mean= temp1 / ttreat;
     *con_mean= temp0 / (twt - ttreat);
-    *value[0];
-    *value[1];
+    *value;
+    *values;
   
 
     //*risk = 4 * twt * max_y * max_y - alpha * twt * effect * effect + 
