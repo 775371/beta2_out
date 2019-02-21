@@ -161,7 +161,7 @@ extern double matching_xpred(double *y1, double *y2, double wt1, double wt2, dou
 extern double fitH_xpred(double *y, double wt, double treatment, double tr_mean, double con_mean,
                          double trs, double cons, double alpha, double xtrain_to_est_ratio);
 extern double fitA_xpred(double *y, double wt, double treatment, double tr_mean, double con_mean);
-extern double CTH_xpred(double *y, double wt, double treatment, double tr_mean, double con_mean,
+extern double CTH_xpred(double *y, double wt, double treatment, double treatments, double tr_mean, double con_mean,
                         double trs, double cons, double alpha, double eta, double xtrain_to_est_ratio,
                         double propensity);
 extern double CTA_xpred(double *y, double wt, double treatment, double tr_mean, double con_mean,
@@ -191,7 +191,7 @@ extern int anovainit(int n, double *y[], int maxcat, char **error,
   	     double *parm, int *size, int who, double *wt, double *treatment);
 
 
-extern void anovass(int n, double *y[], double *value,double *values, double *risk,
+extern void anovass(int n, double *y[], double *value, double *risk,
   	    double *wt, double *treatment, double max_y);
 
 
