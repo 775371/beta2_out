@@ -62,7 +62,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     double effect;
     double effects;
  
-  double A[2][1]={{0},{0}};
+  double A[2]={0,0};
  
     double tr_var, con_var;
     double con_sqr_sum = 0., tr_sqr_sum = 0.;
@@ -118,8 +118,8 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
         
     effect = beta_1;
     effects=beta_2;
- A[1][1]=effect;
- A[2][1]=effects;
+ A[1]=effect;
+ A[2]=effects;
     beta1_sqr_sum = beta_1 * beta_1;
     beta2_sqr_sum = beta_2 * beta_2;
     var_beta = eta*(beta1_sqr_sum /twt- beta_1 * beta_1 / (twt* twt)) + (1-eta)*(beta2_sqr_sum /twt- beta_2 * beta_2 / (twt* twt));
