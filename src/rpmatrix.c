@@ -49,8 +49,8 @@ ctmatrix(pNode me, int *numcat, double **dsplit,
     for (i = 0; i < ct.num_resp; i++)
 	dnode[3 + i][ncnt] = me->response_est[i];
     
-    /*for (i = 0; i < ct.num_resp; i++)
-	dnode[4 + i][ncnt] = me->responses_est[i];*/
+    for (i = 0; i < ct.num_resp; i++)
+	dnode[4 + i][ncnt] = me->responses_est[i];
  
  
  
