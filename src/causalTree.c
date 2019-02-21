@@ -434,7 +434,7 @@ Rprintf("split rule in causal tree.c is %d.\n", split_Rule);
     dnode3 = PROTECT(allocMatrix(REALSXP, nodecount, (4 + ct.num_resp)));
     ddnode = (double **) ALLOC(4 + ct.num_resp, sizeof(double *));
     dptr = REAL(dnode3);
-    for (i = 0; i < 3 + ct.num_resp; i++) {
+    for (i = 0; i < 4 + ct.num_resp; i++) {
         ddnode[i] = dptr;
         dptr += nodecount;
                
