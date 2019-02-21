@@ -191,7 +191,7 @@ extern int anovainit(int n, double *y[], int maxcat, char **error,
   	     double *parm, int *size, int who, double *wt, double *treatment);
 
 
-extern void anovass(int n, double *y[], double *value, double *risk,
+extern void anovass(int n, double *y[], double *value,double *values, double *risk,
   	    double *wt, double *treatment, double max_y);
 
 
