@@ -451,6 +451,7 @@ honest.causalTree <- function(formula, data, weights, treatment, treatments, sub
 								wt = ctfit$dnode[, 3L],
 								dev = ctfit$dnode[, 1L],
 								yval = ctfit$dnode[, 4L],
+			yvals=ctfit$dnode[, 5L],
 								complexity = ctfit$dnode[, 2L],
 								ncompete = 0L,
 								nsurrogate = 0L)
@@ -463,6 +464,7 @@ honest.causalTree <- function(formula, data, weights, treatment, treatments, sub
 								wt = ctfit$dnode[, 3L],
 								dev = ctfit$dnode[, 1L],
 								yval = ctfit$dnode[, 4L],
+			yvals=ctfit$dnode[, 5L],
 								complexity = ctfit$dnode[, 2L],
 								ncompete = pmax(0L, ctfit$inode[, 3L] - 1L),
 								nsurrogate = ctfit$inode[, 4L])
