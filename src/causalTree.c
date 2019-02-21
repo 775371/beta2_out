@@ -385,7 +385,7 @@ Rprintf("split rule in causal tree.c is %d.\n", split_Rule);
     
     partition(1, tree, &temp, 0, n, minsize, split_Rule, split_alpha, split_eta,  bucketnum, bucketMax,
               train_to_est_ratio); // temp store sumrisk
-  
+  Rprintf("end partition in causal tree.c\n");
     CpTable cptable = (CpTable) ALLOC(1, sizeof(cpTable));
 
     cptable->cp = tree->complexity;
