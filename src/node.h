@@ -33,6 +33,7 @@ typedef struct node {
     double response_est[20];   /* actual length depends on splitting rule */
     // new add for anovafitpred.c 2015.12.03:
     double responses_est[20]; 
+    
     double treatMean[20];
     double controlMean[20];
     double xtreatMean[20];
