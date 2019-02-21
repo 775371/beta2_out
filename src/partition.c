@@ -71,7 +71,7 @@ partition(int nodenum, pNode splitnode, double *sumrisk, int n1, int n2,
           &(me->risk), ct.wtemp, ct.trtemp, ct.max_y, ct.propensity);
 	    } else if (split_Rule == 2) {
 	        // ct
-	        (*ct_eval) (n, ct.ytemp, me->response_est, me->controlMean, me->treatMean, 
+	        (*ct_eval) (n, ct.ytemp, me->response_est,me->responses_est, me->controlMean, me->treatMean, 
           &(me->risk), ct.wtemp, ct.trtemp, ct.trstemp, ct.max_y, alpha, eta, train_to_est_ratio);
 	    } else if (split_Rule == 3) {
 	        // fit
