@@ -60,6 +60,8 @@ printme(pNode me, int id)
     Rprintf("\t   Complexity param= %f\n", me->complexity);
     Rprintf("  response estimate=%f,  risk/n= %f\n", *(me->response_est),
 	    me->risk / me->num_obs);
+  Rprintf("  responses estimate=%f,  risk/n= %f\n", *(me->responses_est),
+	    me->risk / me->num_obs);
 
     if (me->leftson)
 	Rprintf("  left son=%d (%d obs)", 2 * id, (me->leftson)->num_obs);
