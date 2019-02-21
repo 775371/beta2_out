@@ -126,7 +126,7 @@ CTss(int n, double *y[], double *value[2],  double *con_mean, double *tr_mean,
     
     *tr_mean= temp1 / ttreat;
     *con_mean= temp0 / (twt - ttreat);
-    *value[2] = {&effect, &effects};
+    *value[2] = {effect, effects};
     *value[0];
     *value[1];
   
