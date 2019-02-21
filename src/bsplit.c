@@ -70,7 +70,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, doub
             //tot
             (*ct_choose) (k, ytemp, xtemp, nc, ct.min_node, &improve, 
              &split, ct.csplit, me->risk, wtemp, trtemp, ct.propensity, minsize);
-        } else if (split_Rule == 2) {
+        } else if (split_Rule == 2) {Rprintf("enter ct_choose from bsplit.c\n");
             //CT
             (*ct_choose) (k, ytemp, xtemp, nc, ct.min_node, &improve, 
              &split, ct.csplit, me->risk, wtemp, trtemp, trstemp, minsize, alpha, eta, train_to_est_ratio);
