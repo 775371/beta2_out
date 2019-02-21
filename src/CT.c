@@ -117,7 +117,7 @@ CTss(int n, double *y[], double *value,  double *values, double *con_mean, doubl
     beta_0 = (z_sum - beta_1 * y_sum -beta_2 * k_sum) / twt;
         
     effect = beta_1;
-    effects=beta_2;
+    effects= beta_2;
  
  //A[1]=beta_1;
  //A[2]=beta_2;
@@ -129,8 +129,8 @@ CTss(int n, double *y[], double *value,  double *values, double *con_mean, doubl
     
     *tr_mean= temp1 / ttreat;
     *con_mean= temp0 / (twt - ttreat);
-    *value=beta_1;
-    *values=beta_2;
+    *value= effect;
+    *values= effects;
   
 
     //*risk = 4 * twt * max_y * max_y - alpha * twt * effect * effect + 
