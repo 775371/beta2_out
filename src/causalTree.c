@@ -330,7 +330,7 @@ Rprintf("split rule in causal tree.c is %d.\n", split_Rule);
         //tot:
         (*ct_eval) (n, ct.ydata, tree->response_est, tree->controlMean, tree->treatMean, 
          &(tree->risk), wt, treatment, ct.max_y, ct.propensity);
-    } else if (split_Rule == 2) {  
+    } else if (split_Rule == 2) {  Rprintf("start ct_eval in causal tree.c\n");
         // ct:
         (*ct_eval) (n, ct.ydata, tree->response_est,  tree->responses_est, tree->controlMean, tree->treatMean, 
          &(tree->risk), wt, treatment, treatments, ct.max_y, split_alpha, split_eta, train_to_est_ratio);
@@ -377,7 +377,7 @@ Rprintf("split rule in causal tree.c is %d.\n", split_Rule);
     }
     tree->complexity = tree->risk;
     ct.alpha = ct.complexity * tree->risk;
-                                  Rprintf("start partition in causal tree.c\n");
+                                 
 
     /*
      * Do the basic tree
