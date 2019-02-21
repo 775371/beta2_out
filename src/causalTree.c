@@ -332,7 +332,7 @@ Rprintf("split rule in causal tree.c is %d.\n", split_Rule);
          &(tree->risk), wt, treatment, ct.max_y, ct.propensity);
     } else if (split_Rule == 2) {  
         // ct:
-        (*ct_eval) (n, ct.ydata, tree->response_est, tree->responses_est, tree->controlMean, tree->treatMean, 
+        (*ct_eval) (n, ct.ydata, tree->response_est,  tree->controlMean, tree->treatMean, 
          &(tree->risk), wt, treatment, treatments, ct.max_y, split_alpha, split_eta, train_to_est_ratio);
     } else if (split_Rule == 3) {
         //fit
