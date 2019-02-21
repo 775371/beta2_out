@@ -14,7 +14,7 @@ myxval(int n_xval, CpTable cptable_head, int *x_grp, int maxcat, char **errmsg,
     int i, j, k, ii, jj;
     int last;
     int xgroup;
-    double *xtemp, *xpred, *xpred2;
+    double *xtemp, *xpred, *xpreds, *xpred2;
     int *savew;
     double *cp;
     double alphasave;
@@ -32,6 +32,9 @@ myxval(int n_xval, CpTable cptable_head, int *x_grp, int maxcat, char **errmsg,
      */
     xtemp = (double *) CALLOC(4 * ct.num_unique_cp, sizeof(double));
     xpred = xtemp + ct.num_unique_cp;
+    
+    xpreds = xtemp + ct.num_unique_cp;
+    
     xpred2 = xpred + ct.num_unique_cp;
     cp = xpred2 + ct.num_unique_cp;
     savew = (int *) CALLOC(ct.n, sizeof(int));
