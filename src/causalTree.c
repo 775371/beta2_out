@@ -400,7 +400,7 @@ Rprintf("split rule in causal tree.c is %d.\n", split_Rule);
         make_cp_list(tree, tree->complexity, cptable);
         make_cp_table(tree, tree->complexity, 0);
         
-        if (xvals > 1) {
+        if (xvals > 1) { Rprintf("xvals in causal tree.c is %d.\n", xvals); 
             myxval(xvals, cptable, xgrp, maxcat, &errmsg, minsize, savesort, split_Rule,
                    crossmeth, split_alpha, cv_alpha, split_eta, cv_eta, bucketnum, bucketMax,gamma);
         }
