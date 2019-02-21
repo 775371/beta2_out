@@ -11,7 +11,7 @@
 #endif
 
 void
-CTH_rundown(pNode tree, int obs, double *cp, double *xpred, double *xtemp, int k, double alpha, double eta, 
+CTH_rundown(pNode tree, int obs, double *cp, double *xpred, double *xpreds,double *xtemp, int k, double alpha, double eta, 
             double xtrain_to_est_ratio, double propensity)
 {   
 	Rprintf("Enter CTH_rundown.c");
